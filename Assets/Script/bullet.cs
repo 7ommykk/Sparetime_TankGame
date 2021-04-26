@@ -48,6 +48,10 @@ public class bullet : MonoBehaviour
                 Destroy(gameObject);
                 break;
             case "Barrier":
+                if(isPlayerBullet)
+                {
+                    collision.SendMessage("PlayAudio");
+                }
                 Destroy(gameObject);
                 break;
             default:

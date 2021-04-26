@@ -6,8 +6,8 @@ public class Heart : MonoBehaviour
 {
     // 引用
     private SpriteRenderer sr;
-
     public GameObject explosionPrefab;
+    public AudioClip dieAudio;
 
     public Sprite BrokenSprite;
 
@@ -23,6 +23,7 @@ public class Heart : MonoBehaviour
         sr.sprite = BrokenSprite;
         Instantiate(explosionPrefab, transform.position, transform.rotation);
         PlayerManager.Instance.isDefeat = true;
+        AudioSource.PlayClipAtPoint(dieAudio, transform.position);
     }
 
 }
