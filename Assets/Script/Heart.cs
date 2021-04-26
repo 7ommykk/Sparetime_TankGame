@@ -17,10 +17,12 @@ public class Heart : MonoBehaviour
         sr = GetComponent < SpriteRenderer > ();
     }
 
+
     public void Die()
     {
         sr.sprite = BrokenSprite;
         Instantiate(explosionPrefab, transform.position, transform.rotation);
+        PlayerManager.Instance.isDefeat = true;
     }
 
 }

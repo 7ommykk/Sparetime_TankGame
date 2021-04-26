@@ -152,6 +152,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 394892c461379e0488e631dae8e5917e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifeValue: 3
+  playerScore: 0
+  isDead: 0
+  Born: {fileID: 8982686266797728966, guid: 5930fb27d1c1ab44f8fd2a81c1fb166b, type: 3}
 --- !u!4 &257225520
 Transform:
   m_ObjectHideFlags: 0

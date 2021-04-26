@@ -43,7 +43,18 @@ public class Player : MonoBehaviour
                 defendEffectPrefab.SetActive(false);
             }
         }
+    }
 
+    // 固定物理帧，0.02秒执行一次，Update后运行
+    private void FixedUpdate()
+    {
+        // 如果游戏失败，禁止玩家一切行为
+        if(PlayerManager.Instance.isDefeat)
+        {
+            return;
+        }
+        Move();
+        
         // 攻击CD
         if(timeVal >= 0.4f)
         {
@@ -51,15 +62,8 @@ public class Player : MonoBehaviour
         }
         else
         {
-            timeVal += Time.deltaTime;
+            timeVal += Time.fixedDeltaTime;
         }
-    }
-
-    // 固定物理帧，0.02秒执行一次，Update后运行
-    private void FixedUpdate()
-    {
-        Move();
-        // Attack();
     }
 
     // 坦克的攻击方法
@@ -122,9 +126,11 @@ public class Player : MonoBehaviour
         {
             return;
         }
+        PlayerManager.Instance.isDead = true;
+
         // 产生爆炸特效
         Instantiate(explosionPrefab, transform.position, transform.rotation);
         // 死亡
-        Destroy(gameObject);    
+        Destroy(gameObject);
     }
 }
