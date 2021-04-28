@@ -16,4 +16,4 @@ Unity3D, Battle of Tanks, an introductory course for every game dreamer
 
 5、玩家坦克类型，小型中型大型，速度快慢，子弹快慢，以及动画（素材已提供），使用动画控制器。
 
-完结撒花！~ B站地址：https://www.bilibili.com/video/BV1PW41197Su
+完结撒花！~ 
