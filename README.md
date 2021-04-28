@@ -4,7 +4,7 @@ Unity3D, Battle of Tanks, an introductory course for every game dreamer
 
 （Unity3D, 坦克大战，每个游戏梦想人的入门课程）
 
-课堂作业：
+项目拓展：
 
 1、场景1，场景慢慢玩上移动上来，Tips: 使用Animation组件。
 
